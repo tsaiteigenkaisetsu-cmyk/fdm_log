@@ -14,17 +14,17 @@ Write-Host ""
 
 Write-Host "ファイルを追加中..." -ForegroundColor Cyan
 git add .
-Write-Host "ファイルをステージしました" -ForegroundColor Green
+Write-Host "✓ ファイルをステージしました" -ForegroundColor Green
 Write-Host ""
 
 Write-Host "コミット中..." -ForegroundColor Cyan
 git commit -m "$CommitMessage"
-Write-Host "コミットしました" -ForegroundColor Green
+Write-Host "✓ コミットしました" -ForegroundColor Green
 Write-Host ""
 
 Write-Host "GitHubにプッシュ中..." -ForegroundColor Cyan
 git push
-Write-Host "プッシュが完了しました!" -ForegroundColor Green
+Write-Host "✓ プッシュが完了しました!" -ForegroundColor Green
 Write-Host ""
 
-Write-Host "完了しました! ページは数分以内に更新されます。" -ForegroundColor Green
+Write-Host "🎉 完了しました! ページは数分以内に更新されます。" -ForegroundColor Green
