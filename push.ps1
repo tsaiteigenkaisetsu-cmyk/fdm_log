@@ -1,9 +1,4 @@
-﻿#!/usr/bin/env pwsh
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-
-param(
-    [string]$CommitMessage = "更新"
-)
+﻿[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 Write-Host "=== Git 自動化 ===" -ForegroundColor Cyan
 Write-Host "現在のディレクトリ: $(Get-Location)" -ForegroundColor Gray
@@ -18,7 +13,7 @@ Write-Host "✓ ファイルをステージしました" -ForegroundColor Green
 Write-Host ""
 
 Write-Host "コミット中..." -ForegroundColor Cyan
-git commit -m "$CommitMessage"
+git commit -m "更新"
 Write-Host "✓ コミットしました" -ForegroundColor Green
 Write-Host ""
 
