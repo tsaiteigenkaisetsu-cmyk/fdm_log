@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>簡単ゲーム - クリックカウンター</title>
+</head>
+<body>
+    <h1>クリックカウンターゲーム</h1>
+    <p>ボタンをクリックしてスコアを増やそう！</p>
+    <p>スコア: <span id="score">0</span></p>
+    <button id="clickButton">クリック！</button>
+    <br><br>
+    <a href="index.html">ホームに戻る</a>
+
+    <script>
+        let score = 0;
+        const scoreDisplay = document.getElementById('score');
+        const clickButton = document.getElementById('clickButton');
+
+        clickButton.addEventListener('click', function() {
+            score++;
+            scoreDisplay.textContent = score;
+        });
+    </script>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\user\OneDrive\Documents\WEB_Generate\game.html
