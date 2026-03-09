@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簿記3級 仕訳練習 - 練習ページ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="practice-container">
+        <div class="practice-header">
+            <h2>仕訳練習</h2>
+            <div id="modeDisplay"></div>
+        </div>
+
+        <div class="progress-text">
+            <span id="questionNumber">問 1</span> / <span id="totalQuestions">10</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- 問題セクション -->
+        <div class="problem-section" id="problemSection">
+            <div class="problem-number" id="problemId"></div>
+            <div class="problem-text" id="problemText"></div>
+        </div>
+
+        <!-- 回答セクション -->
+        <div class="answer-section" id="answerSection">
+            <div class="debit-section">
+                <div class="section-title debit">借方（左側）</div>
+                <div class="form-group">
+                    <label for="debitAccount">勘定科目</label>
+                    <select id="debitAccount">
+                        <option value="">選択してください</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="debitAmount">金額</label>
+                    <input type="number" id="debitAmount" placeholder="金額を入力">
+                </div>
+            </div>
+
+            <div class="credit-section">
+                <div class="section-title credit">貸方（右側）</div>
+                <div class="form-group">
+                    <label for="creditAccount">勘定科目</label>
+                    <select id="creditAccount">
+                        <option value="">選択してください</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="creditAmount">金額</label>
+                    <input type="number" id="creditAmount" placeholder="金額を入力">
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-answer" id="answerBtn" onclick="checkAnswer()">回答する</button>
+            </div>
+        </div>
+
+        <!-- 結果セクション -->
+        <div id="resultSection" style="display: none;"></div>
+
+        <!-- ナビゲーションボタン -->
+        <div class="button-group" id="navigationButtons" style="display: none;">
+            <button class="btn btn-next secondary" onclick="nextQuestion()">次の問題へ</button>
+            <button class="btn secondary" onclick="goHome()">トップへ戻る</button>
+        </div>
+
+        <!-- 完了メッセージ -->
+        <div id="completionMessage" style="display: none; padding: 30px; text-align: center;">
+            <h2 style="color: var(--success-color); margin-bottom: 20px;">練習完了！</h2>
+            <div id="finalScore" style="font-size: 1.5rem; margin-bottom: 20px;"></div>
+            <div class="button-group">
+                <button class="btn secondary" onclick="location.href='index.html'">トップへ戻る</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

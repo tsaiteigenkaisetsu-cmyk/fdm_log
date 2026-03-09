@@ -1,27 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>My First Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簿記3級 仕訳練習サイト</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container">
+        <header>
+            <h1>簿記3級 仕訳練習サイト</h1>
+            <p class="subtitle">仕訳問題を繰り返し解いて、簿記の力をつけよう！</p>
+        </header>
 
-<h1>fdm_logの最初のWebサイト</h1>
+        <main>
+            <section class="about">
+                <h2>このサイトについて</h2>
+                <p>簿記3級の学習者が、仕訳問題を繰り返し解いて慣れるためのWebページです。</p>
+                
+                <h3>このサイトで身につく力</h3>
+                <ul>
+                    <li>勘定科目を見分ける力</li>
+                    <li>借方 / 貸方を判断する力</li>
+                    <li>金額を正しく入れる力</li>
+                    <li>問題文から取引を読み取る力</li>
+                </ul>
 
-<p>GitHub Pagesで公開しました</p>
+                <h3>こんな人に向いています</h3>
+                <ul>
+                    <li>簿記3級を勉強中の初心者</li>
+                    <li>仕訳問題が苦手な人</li>
+                    <li>スマホやPCでスキマ時間に練習したい人</li>
+                    <li>試験前に反復したい人</li>
+                </ul>
+            </section>
 
-<p><a href="game.html">簡単ゲームをプレイ</a></p>
+            <section class="modes">
+                <h2>学習モードを選択</h2>
+                <div class="mode-grid">
+                    <div class="mode-card">
+                        <h3>通常練習モード</h3>
+                        <p>ランダムで1問ずつ出題。回答後すぐに正誤判定が出ます。初心者向けです。</p>
+                        <a href="practice.html?mode=normal" class="btn">スタート</a>
+                    </div>
 
-<button onclick="hello()">
-クリック
-</button>
+                    <div class="mode-card">
+                        <h3>10問チャレンジモード</h3>
+                        <p>10問連続で解いて、試験感覚を磨きましょう。最後にまとめて結果表示です。</p>
+                        <a href="practice.html?mode=challenge" class="btn">スタート</a>
+                    </div>
 
-<script>
-function hello(){
-alert("こんにちは！！");
-}
-</script>
+                    <div class="mode-card">
+                        <h3>分野別モード</h3>
+                        <p>現金、商品売買、固定資産など、特定分野だけを集中して練習できます。</p>
+                        <a href="practice.html?mode=category" class="btn">スタート</a>
+                    </div>
 
+                    <div class="mode-card">
+                        <h3>苦手克服モード</h3>
+                        <p>過去に間違えた問題だけが出題されます。復習に最適です。</p>
+                        <a href="practice.html?mode=weak" class="btn disabled">準備中</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features">
+                <h2>主な機能</h2>
+                <ul>
+                    <li>✓ 選択式の科目入力で誰でも簡単</li>
+                    <li>✓ 金額は数値で入力</li>
+                    <li>✓ 正誤判定と詳しい解説</li>
+                    <li>✓ スマホ・タブレットに対応</li>
+                    <li>✓ 学習履歴を自動保存（準備中）</li>
+                </ul>
+            </section>
+
+            <section class="info">
+                <h2>サイト構成</h2>
+                <ol>
+                    <li><strong>トップページ</strong> - サイトの説明とモード選択</li>
+                    <li><strong>練習ページ</strong> - 実際に仕訳問題を解く</li>
+                    <li><strong>結果表示エリア</strong> - 正誤判定と解説表示</li>
+                    <li><strong>成績ページ</strong> - 学習の進捗確認（準備中）</li>
+                    <li><strong>問題一覧</strong> - 特定分野だけ反復（準備中）</li>
+                </ol>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 簿記3級 仕訳練習サイト. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
